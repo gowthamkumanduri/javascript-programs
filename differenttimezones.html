@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+button {margin :100px;
+        background-color: pink;}
+</style>
+
+
+
+</head>
+
+<body>
+<p id = 'demo'></p>
+<p id = 'demo1'></p>
+<p id = 'demo2'></p>
+
+
+<button type = "button"   onclick="india()" > india time</button>
+
+
+<button type = "button"   onclick= "newyork()"> newyork time </button>
+
+
+<button type = "button"   onclick= "hongkong()"> hong-kong time </button>
+
+
+<script>
+var d = new Date();
+
+function india()
+{
+    document.getElementById('demo').innerHTML = d.toLocaleString('en-US', {timeZone: 'Asia/Kolkata'});
+
+}
+
+function newyork()
+{
+	document.getElementById('demo').innerHTML = d.toLocaleString('en-US', {timeZone: 'America/New_York'});
+}
+
+function hongkong()
+{
+	document.getElementById('demo').innerHTML = d.toLocaleString('en-US', {timeZone: 'Asia/Hong_Kong'});
+}
+
+
+
+</script>
+
+</body>
+
+</html>
+
+

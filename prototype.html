@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+
+
+<script>
+	
+function hyd(street,movie theatre,zipcode) {
+    this.streetname=street;
+    this.movietheatre=movie theatre;
+    this.zipcode=zipcode;
+}
+//gowtham.moviename = 2000;
+hyd.prototype.criticreview = "average";
+hyd.prototype.fanreview= "spr";
+
+
+
+/*function hyd(streetname,movietheatre,zipcode)
+{
+	this.zipcode = zipcode;
+
+}
+*/
+
+var gowtham = new hyd("satyamroad", "satyam", 500002);
+var sekhar  = new hyd("masab flyover","imax",500121);
+var pavan   = new hyd("RKpuram","vishnu",222222);
+
+document.getElementById("demo").innerHTML = gowtham.zipcode;
+document.getElementById("demo1").innerHTML = sekhar.movie theatre;
+document.getElementById("demo2").innerHTML = pavan.streetname;
+document.getElementById("demo3").innerHTML = pavan.moviename;
+document.getElementById("demo4").innerHTML = pavan.fanreview;
+document.getElementById("demo5").innerHTML = pavan.criticreview;
+
+
+
+
+</script>
+
+<h1> gowtham2 </h1>
+
+</body>
+</html>
+
+
+  

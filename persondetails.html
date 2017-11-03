@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+
+<p id = "result"></p>
+
+
+Name:<input type="text"    id = 'demo'> 
+<br> <br>
+
+City:<input type="text"    id = 'demo1'>
+<br> <br>
+
+Hobbies:<input type="text" id = 'demo2'> 
+<br> <br>
+
+<button onclick="test()">submit</button>
+
+<script>
+
+function test()
+{
+	var uname=document.getElementById('demo').value;
+   	var ucity=document.getElementById('demo1').value;
+	var uhobby=document.getElementById('demo2').value;
+
+var output= 'Hi ' + uname +   ' the closet place near your '   + ucity +   ' is very beautiful.'
+document.getElementById('result').innerHTML = output; 
+}
+
+</script>
+
+</body>
+</html>
+

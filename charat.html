@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the first character of the string "HELLO WORLD".</p>
+
+<button onclick="myF()">Try it</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+function myF() {
+    var str = "This is gowtham";
+    var res = str.charAt(4)
+    var str1 = "this is gowtham";
+    var str2 = "i completed js";
+    var str3 = "and css";
+    document.getElementById("demo1").innerHTML = "this is charAt practical";
+    var res1 = str.charCodeAt(8)
+    document.getElementById("demo").innerHTML = res;
+    document.getElementById("demo2").innerHTML = res1;
+    document.getElementById("demo3").innerHTML = str1 + str2 + str3;
+}
+</script>
+
+</body>
+</html>
