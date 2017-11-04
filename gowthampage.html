@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>gowtham Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: green;
+    display: inline-block;
+}
+
+.topnav a {
+    float: left; 
+    color: white;
+    text-align: center;
+    padding: 14px 46px;
+    text-decoration: none;
+    
+}
+
+.topnav a:hover {
+	background-color: lightgrey;
+	color:black;
+}
+
+.topnav1 { 
+    background-color: green;
+    position:relative;
+    display:inline-block;
+}
+
+.topnav1 a {
+    float: left; 
+    color: white;
+    text-align: center;
+    padding: 14px 46px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown a {
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover{
+	background-color: lightgrey;
+	color:black;
+	text-decoration: underline;
+}
+
+.topnav1:hover .dropdown {
+	display : block;
+
+}
+
+.sideheadings {
+	text-decoration: none;
+	float:left;
+	clear:both;
+	font-weight: bold;
+	color:cornflowerblue;
+    background-color: white;
+    margin :20px;
+}
+.column {
+    float: left;
+    width: 33.33%;
+   padding: 15px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width:1368px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+
+<body>
+
+<div class="topnav">
+<a href="#" >Gowtham page</a>
+</div>
+
+<div class="topnav1">
+<a href="#">Home</a>
+<ul class="dropdown"   style="list-style-type: none;">
+<li><a href="#">Newsfeed</a></li>
+<li><a href="#">photos</a></li>
+<li><a href="#">videos</a></li>
+</ul>
+</div>
+
+<div class="topnav1">
+<a href="#">About</a>
+<ul class="dropdown"   style="list-style-type: none;">
+<li><a href="#">OurMoto</a></li>
+<li><a href="#">Workenvironment</a></li>
+<li><a href="#">growth</a></li>
+</ul>
+</div>
+
+<div class="topnav1">
+<a href="#">Contact US</a>
+<ul class="dropdown"   style="list-style-type: none;">
+<li><a href="#">Address</a></li>
+</ul>
+</div>
+
+<div class="topnav1">
+<a href="#">Technologies</a>
+<ul class="dropdown"   style="list-style-type: none;">
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">JAVASCRIPT</a></li>
+</ul>
+</div>
+
+<h2 style = "text-align: center;"> Welcome Message </h2>
+<p style = "padding-left: 150px;">==============================================================================================================================</p>
+<h3 style = "text-align: center;">This is gowtham.i designed this page with the help of HTML and CSS.i am working as a intern for sekhar as a front end developer</h3>
+<p style = "padding-left: 150px;">==============================================================================================================================</p>
+
+
+<div class="row">
+  <div class="column">
+<span style = "float :left;padding: 5px; background-color:black; color: white; margin:20px; font-weight: bold;">Home</span>
+<a href="#" class="sideheadings">Newsfeed</a>
+<p style = "float :left; clear:left; padding: 5px;"> latest happenings on our webpage will dispay here </p>
+</div>
+
+<div class="column">
+<a href="#" class="sideheadings">photos</a>
+<p style = "float :left; clear:left; padding: 5px;"> latest photos of our products will dispay here </p>
+</div>
+
+<div class="column">
+<a href="#" class="sideheadings">videos</a>
+<p style = "float :left; clear:left; padding: 5px;"> latest videos of our products will dispay here </p>
+</div>
+
+<div class="column">
+<span style = "float :left; padding: 5px; background-color:black; color: white; margin:20px; font-weight: bold; clear:left;">About</span>
+<a href="#" class="sideheadings">our moto</a>
+<p style = "float :left; padding: 5px;clear:left;">  our moto will dispay here </p>
+</div>
+
+<div class="column">
+<a href="#" class="sideheadings">workenvironment</a>
+<p style = "float :left; clear:left; padding: 5px;">reviews of our employees will dispay here </p>
+</div>
+
+<div class="column">
+<a href="#" class="sideheadings">growth</a>
+<p style = "float :left; clear:left; padding: 5px;"> career growth in our company will dispay here </p>
+</div>
+
+<div class="column">
+<span style = "float :left; padding: 5px; background-color:black; color: white; margin:20px; font-weight: bold; clear:left;">contact Us</span>
+<a href="#" class="sideheadings">Address</a>
+<p style = "float :left; padding: 5px;clear:left;"> full address will dispay here </p>
+</div>
+
+
+<div class="column">
+<span style = "float :left; padding: 5px; background-color:black; color: white; margin:20px; font-weight: bold; clear:left;">Technologies</span>
+<a href="#" class="sideheadings">HTML</a>
+<p style = "float :left; padding: 5px;clear:left;"> info related HTML</p>
+</div>
+
+<div class="column">
+<a href="#" class="sideheadings">CSS</a>
+<p style = "float :left; padding: 5px;clear:left;"> info related CSS</p>
+</div>
+
+<div class="column">
+<a href="#" class="sideheadings">JS</a>
+<p style = "float :left; padding: 5px;clear:left;"> info related JS</p>
+</div>
+</div>
+
+<div style = "padding-left:200px;margin-top: 200px;">
+
+<h4> This is &copy copy wright by gowtham </h4>
+</div>
+
+
+
+<iframe style="float: right;" width="560" height="315" src="https://www.youtube.com/embed/KGozS8qGhQk" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
+
