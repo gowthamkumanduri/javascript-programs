@@ -1,0 +1,116 @@
+<!DOCTYPE=html>
+<html>
+<head>
+	<title>electronic calc</title>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<style>
+
+#page{
+  background-color: grey;
+}
+
+
+
+#calc-contain{
+  position: relative;
+  width: 350px;
+  border: 2px solid black;
+  background-color:grey;
+  border-radius: 12px;
+  margin: 0px auto;
+  padding: 20px 20px 100px 20px;
+}
+
+#kgr{
+  position: relative;
+  text-align: center;
+  
+}
+#kgr p{
+  font-size: 20px;
+  font-weight: 900;
+}
+input[type=button] {
+  background: lightGrey;
+  width: 20%;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 7px;
+  margin-left: 13px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px blue;
+}
+input[type=button]:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input[type=button]:hover {
+  background-color: cyan;
+  color: white;
+}
+
+input[type = text] {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 4px 0px 12px black inset;
+}
+</style>
+</head>
+
+
+<body>
+
+<div id='page'>
+
+<div id='calc-contain'>
+
+<div id="kgr">
+<p>Gowtham Raghava Calc </p>
+</div>
+
+<form name='calculator'>
+<input type='text' name='answer' readonly size='18'/>
+<br>
+<input type='button' value='AC' onclick='calculator.answer.value =""'/>
+<input type='button' value='.' onclick='calculator.answer.value +="."'/>
+<input type='button' value='/' onclick='calculator.answer.value +="/"'/>
+<input type='button' value='x' onclick='calculator.answer.value +="*"'/>
+<br>
+<input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+<input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+<input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+<input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+<br>
+
+<input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+<input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+<input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+<input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+<br>
+          
+<input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+<input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+<input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+<input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+<br>
+        
+<input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+<input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+<input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+<input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+<br>
+</form>
+
+
+
+</div>
+</div>
+</body>
+</html>
