@@ -34,7 +34,7 @@
 
 <style type="text/css">
 #header{
-  background: url('https://wallpaperscraft.com/image/beach_sand_surf_walk_dog_72473_1400x1050.jpg');
+  background: url('https://wallpaperscraft.com/image/beach_sand_surf_walk_dog_72473_1920x1080.jpg');
   background-repeat: no-repeat; 
   width: 100%;
   height: 100%;
@@ -47,7 +47,7 @@
 
 
 #services{
-	background: url('https://wallpaperscraft.com/image/triangle_shape_background_bright_87443_1400x1050.jpg');
+	background: url('https://wallpaperscraft.com/image/triangle_shape_background_bright_87443_1920x1080.jpg');
   background-repeat: no-repeat; 
   width: 100%;
   height: 100%;
@@ -59,10 +59,10 @@
 }
 
 #portfolio{
-	background: url('https://wallpaperscraft.com/image/balloon_flight_plant_91681_1400x1050.jpg');
+	background: url('https://wallpaperscraft.com/image/balloon_flight_plant_91681_1920x1080.jpg');
   background-repeat: no-repeat; 
   width: 100%;
-  height: 100%;
+  height: 850px;
   background-color: #060;
   color: #fff;
   text-align: center;
@@ -70,11 +70,71 @@
   margin : 0 ;
 }
 
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 1.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    margin-left: 10%;
+    text-align: left;
+    margin-top: 30px;
+}
+.overlay-content #p{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-left:15%;
+    font-size: 15px;
+    color:white;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    z-index: 1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 #blog{
-	background: url('https://wallpaperscraft.com/image/snail_sand_surface_bright_carapace_43365_1400x1050.jpg');
+	background: url('https://wallpaperscraft.com/image/minions_2015_cartoon_100453_1920x1080.jpg');
   background-repeat: no-repeat; 
   width: 100%;
-  height: 100%;
+  height: 750px;
   background-color: #060;
   color: #fff;
   text-align: center;
@@ -83,16 +143,29 @@
 }
 
 #social{
-	background: url('https://wallpaperscraft.com/image/beach_tropics_sea_sand_palm_trees_sunset_evening_84730_1400x1050.jpg');
+	background: url('http://miriadna.com/desctopwalls/images/max/Tromso-(Norway).jpg');
   background-repeat: no-repeat; 
   width: 100%;
-  height: 100%;
+  height: 750px;
   background-color: #060;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
   margin : 0 ;
 }
+
+#contact{
+	background: url('https://wallpaperscraft.com/image/street_city_evening_black_white_lights_buildings_hdr_25485_1920x1080.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  background-color: #060;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+  margin : 0 ;
+}
+
 
 #site-logo{
  padding-top:10%;
@@ -110,34 +183,9 @@ margin-top:2%;
 	text-decoration:none;
 }
 
-#service-content, #contr{
+#service-content{
 	height: 100%; width:100%; font-size: 0;
 }
-
-#portfolio-content1{
-	height: 100%; width:100%; font-size: 0;
-	display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  grid-template-rows: 250px 250px;
-  grid-gap: 1rem;
-
-}
-
-#contr{
-	position: static;
-	display: inline-block;
-}
-#i {
-	 vertical-align: top; margin-top: 10%;position: relative; left:200px; top:285px;
-z-index: 1;
-}
-
-#p{
-	font-size: 12px;
-	position: absolute;left:500px;padding-top: 15px;padding-left: 5px;
-	z-index: 1;
-}
-
 #left, #middle, #right, #end {display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px; margin-top: 10%}
 #left {width: 25%;}
 #middle {width: 25%;}
@@ -178,12 +226,11 @@ z-index: 1;
 	    </ul></div>			
 </div>
 					
-<form  method="get" id="searchform" action="http://rachelyouens.com/">
+<form  method="post" id="searchform" action="http://rachelyouens.com/">
 	<input type="text" style="width:100px" name="s" id="s"  placeholder="Search">
-</form>								
-
+</form>	
 <div class = 'container-fluid'>
-<nav class=" navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
+<nav class=" navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-bottom" >
 	<ul class="navbar-nav ">
     <li class="nav-item">
       <a class="nav-link" href="#header">Main</a>
@@ -201,14 +248,17 @@ z-index: 1;
       <a class="nav-link" href="#social">Social</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#contact">#contact</a>
+      <a class="nav-link" href="#contact">contact</a>
     </li>
   </ul>
 </nav> 
+</div>							
 </div>
 </div>
 
-<div id="services" class = "container-fluid">
+
+
+<div id="services" class = "container-fluid clearfix">
 <h1 class="text-center">Services</h1>
 <h2>This is how I work holistically across a company's digital presence</h2>
 
@@ -250,176 +300,76 @@ z-index: 1;
 </div>
 </div>
 
+<div id="myNav" class ="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <div class="overlay-content">
+<img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
+<pre id="p">
+Redbubble
 
-<div id="portfolio" class = "container-fluid">
+As the Melbourne-based artist marketplace’s first social lead,
+I turned content into something automated, measurable, 
+and effective. We dug into data to create topical,
+ trending, and fun blog posts, and launched a profitable
+  influencer program tapping Youtube and Twitch.
+Tv stars to drive sales and social following.
+<a href="#" class="btn" role="button">Read more</a></pre>
+</div>
+</div>
+
+<div id="portfolio" class = "container-fluid clearfix">
 <h1 class="text-center" >Portfolio</h1>
 <h2>From LA to Sydney, here are some of the projects I've flexed my expertise on</h2>
-<div id="portfolio-content1">
-
-<div class = "item item1" >
-<a href="#demo"  class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button  type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
+<div class = "row">
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
 
-<div class = "item item2" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a  href="#" class="btn" role="button">Read more</a></pre>
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
+
+
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
+</div>
+
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
 </div>
 
-<div class = "item item3" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
+<div class = "row">
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
 
-<div class = "item item4" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a  href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
 
-<div class = "item item5" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
 
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a  href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
 
-<div class = "item item6" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
-</div>
-
-<div class = "item item7" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
-</div>
-
-<div class = "item item8" >
-<a href="#demo" class= "btn" role="button" data-toggle="collapse" data-target="#demo"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
-<h1> <button type="button" class="btn" data-toggle="collapse" data-target="#demo">Redbubble</button></h1>
-<div id="contr" class="container">
-<div id="demo" class ="collapse">
-<img id= 'i' src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=450&amp;h=450' alt='Redbubble'   width='450' height='450' />
-<pre id='p'>
-Redbubble
-
-As the Melbourne-based artist marketplace’s first social lead,
-I turned content into something automated, measurable, 
-and effective. We dug into data to create topical,
- trending, and fun blog posts, and launched a profitable
-  influencer program tapping Youtube and Twitch.
-Tv stars to drive sales and social following.
-<a href="#" class="btn" role="button">Read more</a></pre>
-</div>
-</div>
+<div class = "col-sm">
+<a href="#portfolio" onclick="openNav()"><img src='http://rachelyouens.com/wp-content/themes/parallax/themify/img.php?src=http://rachelyouens.com/wp-content/uploads/2016/04/random.jpg&amp;w=222&amp;h=175' alt='Redbubble'   width='222' height='175' /></a>
+<h1> <button  type="button" class="btn" onclick="openNav()">Redbubble</button></h1>
 </div>
 </div>
 </div>
 
 
-<div id= "blog" class = "container-fluid">
+
+<div id= "blog" class = "container-fluid clearfix">
 <h1 class="text-center" style="padding-top: 15px" >Blog</h1>
 <h3>below are some recent posts</h3>
 
@@ -474,7 +424,7 @@ Tv stars to drive sales and social following.
 </div>
 
 
-<div id="social" class = "container-fluid">
+<div id="social" class = "container-fluid clearfix">
 <h1 class="text-center" style="padding-top: 15px; color:black;" >Get Social</h1>
 <h3 style="color:black;">Find out where I am, what I'm up to, and what I have to say about it</h3>
 
@@ -527,25 +477,88 @@ Tv stars to drive sales and social following.
 </div>
 </div>
 
-<p style="text-align: center; margin:5px z-index:-1"><a href="http://rachelyouens.com/social-media/" class="btn btn-info" target="_blank">More social networks</a></p>
+<p style="text-align: center; z-index:-1"><a href="http://rachelyouens.com/social-media/" class="btn btn-info" target="_blank">More social networks</a></p>
+</div>
+
+<div id="contact" class = "container-fluid clearfix">
+<h1 class="text-center" style="padding-top: 15px; color:white;" >Wanna Talk?</h1>
+<h3 style="color:white;">Drop by and say hi...</h3>
+
+<form style="text-align: left; margin-left:13%; margin-top: 1%; ">
+Name:*<br>
+<input type="text" name="Name" style="width:35%;">
+<br>
+Email Address:*<br>
+<input type="email" name="Email Address" style="width:35%;">
+<br>
+Phone Number:<br>
+<input type="text" name="Phone Number" style="width:35%;">
+<br>
+Subject:*<br>
+<input type="text" name="Subject" style="width:35%;">
+<br>
+Message:*<br>
+<textarea name="Message" rows="5" cols="10" style="width:35%;" ></textarea>
+<p></p>
+<input type = "submit" value = "Submit">
+</form> 
+</div>
+
+<script>
+    var searchBox = $('#s');
+    $('#s').on('click', function(){
+     $(searchBox).width('500px');
+    })
 
 
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
 </body>
+
+
+<div class = "container-fluid"  style="background-color: black">
+<footer id="footer" class="pagewidth">
+<div class="footer-widgets clearfix">
+<div class="col3-1 first">
+</div>
+<div class="col3-1 ">
+</div>
+<div class="col3-1 ">
+</div>
+</div>
+<p class="back-top"><a href="#header">Back to top</a></p>
+<div class="footer-text clearfix">
+<div class="one">&copy; <a href="#header">Rachel Youens - Digital Strategist</a> 2017</div>	
+<div class="two">Powered by <a href="http://wordpress.org">WordPress</a> &bull; <a href="http://themify.me">Themify WordPress Themes</a></div>
+</div>
+</footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
