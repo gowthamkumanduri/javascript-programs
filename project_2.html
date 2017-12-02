@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Indian Naan Palace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no /">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/plugins.css">
+  <link rel="stylesheet" href="css/style.css">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<style>
+html,body{
+  margin:0px;
+  padding:0px;
+ 
+  }
+ 
+li{
+	margin: 0px;
+	padding:0px;
+}
+.navbar{
+  margin:0;
+  width:160px;
+  background-color:rgb(40,36,36);
+  overflow: hidden;
+  height: 655px;
+  position: absolute;
+  z-index: 1;
+}
+
+
+/*.dropdown-menu a {
+    float: none;
+    color: orangered;
+    padding: 8px ;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}*/
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin:2px;
+  border-radius: 50%;
+}
+.fa-facebook {
+ background: burlywood;
+  color: black;
+}
+.fa-foursquare {
+	background: burlywood;
+  color: black;
+}
+.fa-instagram {
+  background: burlywood;
+  color: black;
+}
+.fa-share-alt{
+	background: burlywood;
+	color:black;
+}
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+.carousel-indicators li {
+    display: inline-block;
+    text-indent: 0;
+    cursor: pointer;
+    border: 2px solid orangered;
+    border-radius: 50%;
+    width:20px;
+   height: 20px;   
+    background-color: orangered;    
+   margin:10px;
+   margin-bottom: 65px;  
+}
+
+.carousel-indicators .active{
+   border-radius: 50%;
+   width:20px;
+   height: 20px;   
+    background-color: orangered;
+    opacity: 0.6;
+
+}
+.top-left {
+    position: absolute;
+    top: 150px;
+    left: 45%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%,50%);
+    
+}
+
+.verticalline{
+	border-left: thick solid white;
+	margin-left: 220px;
+}
+
+#test1{
+	background-image: url("https://media.gqindia.com/wp-content/uploads/2015/04/wasabi-by-morimoto-at-the-taj-mahal-hotel-new-delhi_0.jpg");
+	height: 600px;
+
+
+}
+
+#test1 a:visited {
+	color: violet;
+}
+
+#myimg {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+     filter: grayscale(1);
+}
+
+#myimg:hover {
+	filter: grayscale(0);
+	transition: 0.3s ease-in-out;
+
+}
+
+
+.column {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+@media (max-width: 800px) {
+	body,html{
+		overflow-x: visible;
+	}
+    .column {
+        width: 33%;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 99%;
+    }
+}
+
+
+
+.gallery {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  
+  height:0;
+  transition: .5s ease;
+}
+.gallery:hover .overlay {
+  bottom: 66%;
+  height: 30%;
+  opacity:0.5;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark">
+
+<ul class="navbar-nav">
+<div class = "container-fluid"  style="border-bottom:1px solid grey;">
+    <li class="nav-item" style="margin-bottom: 8px">
+    <span class= "fa fa-globe" style = "color:saddlebrown;padding-right:2px"></span>
+  <a  href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" title="English Version" style = "color:saddlebrown;padding-right:2px;text-decoration:none">EN</a>
+  <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" title="US Version" style = "color:orangered;text-decoration:none">USA</a>  
+    </li>
+</div>
+
+
+<div class = "container-fluid" style="border-bottom:1px solid grey;">
+<li class="nav-item" style="text-align:center;padding:25px 8px 25px 8px;">
+<h3><a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" title="Indian naan palace" style = "color:white; text-decoration:none; font-family:georgia;cursor:pointer"><pre>Indian
+Naan
+Palace</a></h3>
+ </li>
+   </div>
+
+<div class = "container-fluid" style="border-bottom:1px solid grey;">
+<li class="nav-item dropdown" style="text-align:center;padding:5px;">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" style= "color:orangered;text-decoration:none;font-family:georgia;font-size:100%;text-align:center;cursor:pointer">Location</a>
+ <div class= "dropdown-menu dropdown-menu-left">
+<a class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">Delhi</a>
+<a class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">Hyderabad</a>
+<a class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">California</a>
+<a class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">Virginia</a>
+<a class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">Houston</a>
+   </div> 
+    </li>
+</div>   
+
+<div class = "container-fluid" style="border-bottom:1px solid grey;">
+<li class="nav-item dropdown" style="text-align:center;padding:5px;">
+<a class="nav-link dropdown-toggle " id = "plus1" data-toggle="dropdown" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" style= "color:orangered;text-decoration:none;font-family:georgia;font- size:140%;cursor:pointer">Menu</a> 
+ <ul class= "dropdown-menu dropdown-menu-left" style="text-align:center;">
+<li class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;">Naan</li>
+<li class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;">Biryani</li>
+<li class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;">Samosa</li>
+<li class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;">Curries</li>
+<li class="dropdown-item" style="color:orangered;text-decoration:none;font-family:georgia;">Appetizers</li>
+   </ul> 
+    </li>  
+   </div>
+
+
+<div class = "container-fluid">
+<li class="nav-item" style = "text-align:center;padding:50px 0px 50px ">
+<a class="nav-link" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" title="" style= "color:orangered;text-decoration:none;font-family:georgia;font-weight:bold;cursor:pointer;" >Offers</a>
+<a class="nav-link" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" title="" style= "color:orangered;text-decoration:none;font-family:georgia;font-weight:bold;cursor:pointer;" >About Us</a>
+ </li> 
+   </div>
+
+ <div class = "container-fluid">
+<ul style="list-style-type:none;display:inline;text-align:center;">
+<li><a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/" class="fa fa-foursquare"></a><li>
+</ul> 
+</div>
+</ul>
+</nav>
+
+
+<div id="demo" class="carousel slide" data-ride="carousel" data-pause="false">
+<ul class="carousel-indicators" style="padding-left: 350px">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1" ></li>
+    <li data-target="#demo" data-slide-to="2" ></li>
+    <li data-target="#demo" data-slide-to="3" ></li>
+    <li data-target="#demo" data-slide-to="4" ></li>
+    <li data-target="#demo" data-slide-to="5" ></li>
+    <li data-target="#demo" data-slide-to="6" ></li>
+    <li data-target="#demo" data-slide-to="7" ></li>
+    <br>
+    <a href = "#next"><span class="fa fa-chevron-circle-down" style="font-size:48px;color:orangered;margin-top:75px;text-decoration: none;"></span></a>
+   </ul>
+  
+  
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active">
+      <img src="https://www.thedeliciouscrescent.com/wp-content/uploads/2016/05/Easy-Hyderabadi-Chicken-Biryani-2.jpg" alt="home--section1" style="width:100%; height: 655px; float: right">
+       <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered">
+      <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">How Big Is 
+your Bite?</pre></div>
+    </div>
+    
+    <div class="carousel-item">
+      <img src="https://www.thebetterindia.com/wp-content/uploads/2016/07/dealocx-blog-06.jpg" alt="1Bite2Go-Cafe-Deli-Housemade-Mega-Bite-Triple-Meat-Sandwich" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,80%);"">
+      <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Mega Bite Sandwich
+10 cm high
+Take the Mega Bite Challenge!</pre></div>
+    </div>
+    
+    <div class="carousel-item">
+      <img src="https://jgblackbook.com/wp-content/uploads/blog/6a011570de908b970c019104459336970c.jpg" alt="home-kv3" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered">
+      <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">What's
+Melting?</pre></div>
+    </div>
+    
+ 
+    <div class="carousel-item">
+      <img src="http://thewanderlustkitchen.com/wp-content/uploads/2013/09/Easy-Indian-Naan-Bread-0004.jpg" alt="1Bite2Go-Cafe-Deli-Philly-Cheese-Steak-Sandwich" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,50%);"">
+      <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Philly Cheese Steak Sandwich
+Thin sliced beef
+caramelized onions
+cheddar cheese sauce
+Simply melt in your mouth!</pre></div>
+    </div>
+   
+ 
+    <div class="carousel-item">
+      <img src="http://cookingshooking.in/wp-content/uploads/2015/01/garlicnaan3.jpg" alt="slider2" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered">
+      <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">Breakfast
+at 4 PM?</pre></div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://media.indiatimes.in/media/content/2016/Jun/zomato_1465466191.jpg" alt="1Bite2Go-Cafe-Deli-Crab-Hash-Skillet" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,50%);"">
+      <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">From Crab Hash Skillet
+Breakfast to Handmade
+Sausages & Eggs.
+Kick start your day any time
+your way!</pre></div>
+    </div>
+ 
+    <div class="carousel-item">
+      <img src="http://s3.india.com/travel/wp-content/uploads/2016/06/kinara-dhaba.jpg" alt="home-kv7" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered">
+      <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">Where is 
+The Beef?</pre></div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://i0.wp.com/files.hungryforever.com/wp-content/uploads/2015/04/dhaba.jpg?w=1269&strip=all&quality=80" alt="1Bite2Go-Cafe-Deli-Housemade-Pastrami-Sandwich" style="width: 100%; height: 655px; float: right" >
+      <div class="top-left">
+         <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,120%);"">
+      <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Housemade Pastrami
+Your Deli Fix In Taipei!
+</pre></div>
+</div>
+ </div>
+</div>
+<div class="progress">
+    <div class="progress-bar" style="width:100%;background-color: orangered;"></div>
+  </div>
+
+<div id="demo1" class="carousel slide" data-ride="carousel" data-pause="false">
+<ul class="carousel-indicators" style="padding-left: 100px;margin-bottom: 60px;">
+    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+    <li data-target="#demo1" data-slide-to="1" ></li>
+    <li data-target="#demo1" data-slide-to="2" ></li>
+    <li data-target="#demo1" data-slide-to="3" ></li>
+    <li data-target="#demo1" data-slide-to="4" ></li>
+    <li data-target="#demo1" data-slide-to="5" ></li>
+    <li data-target="#demo1" data-slide-to="6" ></li>
+    <li data-target="#demo1" data-slide-to="7" ></li>
+    <li data-target="#demo1" data-slide-to="8" ></li>
+    <li data-target="#demo1" data-slide-to="9" ></li>
+    <li data-target="#demo1" data-slide-to="10" ></li>
+    <a href = "#next1"><span class="fa fa-chevron-circle-down" style="font-size:48px;color:orangered;margin-top:75px;text-decoration: none;"></span></a>
+</ul>
+  
+  
+<div class="carousel-inner" id = "next">
+    
+    <div class="carousel-item active">
+     <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <img src="https://steemitimages.com/DQmaAhBgmu4ZkBe2b2LXA18FNX4Yd2F85f1mTtreWh31Sd5/samosa-and-sauce-hd-wallpaper-01848.jpg" alt="1Bite2Go-Cafe-Deli-New-Year-Eve-Countdown-Party" style="width: 1520px; height: 655px; float: right"></a>
+       <div class="top-left" style="position: absolute;top: 50px;left: 58%;">
+         <a href ="https://codepen.io/gowthamkumanduri/full/ZamqQQ"><svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style="position: absolute;top: 25px;left:55%;transform: translate(18%,62%);">
+      <pre style="font-size: 30px; font-family: georgia; font-weight: bolder;color: white;">What's Hot? 
+NYE
+Countdown
+Party with
+Spectacular
+FireWorks</pre></div>
+    </div>
+    
+    <div class="carousel-item">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">  <img src="https://media.blogto.com/articles/20131223-sultanofsamosas2048-07.jpg?width=1300&quality=70" alt="1Bite2Go-Cafe-Deli-Year-End-Spring-Party-Packages" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left" style="position: absolute;top: 50px;left: 58%;">
+         <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"><svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 54%;transform: translate(20%,80%);"">
+      <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">What's Hot? 
+Fun Year-End
+and Spring
+Party Packages</pre></div>
+    </div>
+    
+    <div class="carousel-item">
+     <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <img src="https://www.kasomafrica.com/wp-content/uploads/2017/05/Samosas.jpg" alt="1Bite2Go-Cafe-Deli-Thanksgiving-Special-For-Four" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+        <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered">
+     <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">What's
+Melting?</pre></div>
+    </div>
+    
+ 
+    <div class="carousel-item">
+     <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <img src="https://media.blogto.com/articles/20160815-2048-Lageez1.jpg?cmd=resize_then_crop&quality=70&w=1520&height=655" alt="1Bite2Go-Cafe-Deli-Christmas-New-Year-Eve-Special" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+        <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,50%);"">
+     <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Philly Cheese Steak Sandwich
+Thin sliced beef
+caramelized onions
+cheddar cheese sauce
+Simply melt in your mouth!</pre></div>
+    </div>
+   
+ 
+    <div class="carousel-item">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">  <img src="https://res.cloudinary.com/simpleview/image/upload/crm/frisco/BHEEMAS-KITCHEN-376fedca5056a36_376ff20a-5056-a36a-074635c28a21a64d.jpg" alt="1Bite2Go-Cafe-Deli-Father-Day-Beer-Milkshake" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+        <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered">
+    <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">Breakfast
+at 4 PM?</pre></div>
+    </div>
+
+    <div class="carousel-item">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">  <img src="http://www.archanaskitchen.com//images/archanaskitchen/1-Author/Shaheen_Ali/DIMER_MALAI_CURRY__BENGALI_STYLE_EGG_CURRY_IN_COCONUT_MILK.jpg" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"> <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,50%);"">
+    <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">From Crab Hash Skillet
+Breakfast to Handmade
+Sausages & Eggs.
+Kick start your day any time
+your way!</pre></div>
+    </div>
+ 
+    <div class="carousel-item">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">  <img src="http://www.manjulaskitchen.com/blog/wp-content/uploads/crispy_aloo_tikki.jpg" alt="1Bite2Go-Cafe-Deli-Famous-Pink-Lemonade" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">     <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered">
+    <pre style="font-size: 75px; font-family: georgia; font-weight: bolder;color: white;">Where is 
+The Beef?</pre></div>
+    </div>
+
+    <div class="carousel-item">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">  <img src="https://2117e.https.cdn.softlayer.net/802117E/www.archanaskitchen.com/images/archanaskitchen/1-Author/sibyl_sunitha/Coriander_Prawn_Cakes_Recipe.jpg" alt="1Bite2Go-Cafe-Deli-Bite-Cheese-Burger" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">     <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,120%);"">
+    <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Housemade Pastrami
+Your Deli Fix In Taipei!
+</pre></div>
+</div>
+
+<div class="carousel-item">
+<a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">      <img src=" https://media-cdn.tripadvisor.com/media/photo-s/05/29/85/87/dhaba-by-claridges-dlf.jpg" alt="1Bite2Go-Cafe-Deli-Buy-One-Get-One-Free-Beer" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+     <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">    <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,120%);"">
+    <pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Housemade Pastrami
+Your Deli Fix In Taipei!
+</pre></div>
+</div>
+
+<div class="carousel-item">
+<a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">      <img src="http://www.dhababyclaridges.com/images/Dhaba_locations/Saket/Dhaba_saket_4.jpg" alt="1Bite2Go-Cafe-Deli-The-Godfather-Spaghetti-Meat-Balls" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+ <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">        <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,120%);"">
+<pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Housemade Pastrami
+Your Deli Fix In Taipei!
+</pre></div>
+</div>
+
+<div class="carousel-item">
+<a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ"><img src="https://www.liveinstyle.com/sites/default/files/article/feature/sevilla-the-claridges-delhi.jpg" alt="1Bite2Go-Cafe-Deli-Taipei-101-View" style="width: 1520px; height: 655px; float: right" ></a>
+      <div class="top-left">
+    <a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">     <svg width="125" height="125">
+         <rect width="125" height="125" style="fill:orangered;stroke:orangered" /></svg></a>
+       </div>
+       <div class="centered" style = "position: absolute;top: 50%;left: 50%;transform: translate(20%,120%);"">
+<pre style="font-size: 35px; font-family: georgia; font-weight: bolder;color: white;">Housemade Pastrami
+Your Deli Fix In Taipei!
+</pre></div>
+</div>
+</div>
+</div>
+
+
+
+
+<div style="background-color: burlywood;height:800px" id = "next1">
+
+<h1 class="display-4"><pre style="padding-top:30px;padding-left: 220px;color: white;font-family: georgia; font-weight: bolder">Authentic
+Deli Classics</h1>
+
+<div class ="verticalline">
+	
+<div class = "container"><pre style="font-size: 20px; font-family: georgia; font-weight: bold;"> Craving for authentic, hearty deli classics?
+
+Get a bite of New York in Taipei at 1Bite2Go Café & Deli, from hot pastrami
+to succulent corned beef to tasty pickles.    	
+
+Every 1Bite2Go dish is home made from scratch, using premium-quality
+meats, natural ingredients and time-honored preparation methods to
+create traditional ﬂavors that are fresh, healthy, and quite simply,
+delicious.
+
+Housemade bread, baked fresh daily, makes the sandwiches just a bit
+more special, ﬂavorful.
+</pre>
+</div></div>
+
+<h3 style="font-size: 18px; font-family: georgia; font-weight: bold;padding-top:15px;padding-left: 18%;"><a href ="https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="color: white;text-decoration: none" >Indian Naan Palace tasty menu</a></h3>
+<a href = "#test1"><span class="fa fa-chevron-circle-down" style="font-size:48px;color:orangered;text-decoration: none;padding-left: 50%"></span></a>
+</div>
+
+
+
+
+
+<div id = "test1" style="vertical-align:top;">
+
+<h1> <pre style="margin-left: 60%;padding-top: 16%;"><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" target="_blank"  style="text-decoration: none;color:orangered; font-family: georgia; font-weight: bold;">Sandwitch of
+the month</a>
+
+<a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" target="_blank" style="text-decoration: none;color:orangered; font-family: georgia; font-weight: bold;">Reuben Sandwitch</a></pre></h1>
+<a href = "#next2"><span class="fa fa-chevron-circle-down" style="font-size:48px;color:orangered;margin-top:75px;text-decoration: none;padding-left: 50%"></span></a>
+</div>
+
+
+
+<div style="background-color: tomato;height: 700px" id = "next2">
+
+<h1 class="display-4"><pre style="padding-top:30px;padding-left: 220px;color: white;font-family: georgia; font-weight: bolder">Contemporary
+Indian Diner</h1>
+
+<div class ="verticalline">
+	
+<div class = "container">
+<pre style="font-size: 18px; font-family: georgia; font-weight: bold;">Indian Naan Palace is a contemporary take on the classic Indian diner
+offering a relaxing, fun dining experience.
+
+Nostalgic Americana photos, rustic natural wood furniture, warehouse
+ceiling lamps, and colorful vintage floor tiles are thoughtfully combined to
+bring you to the golden era of the 50’s and 60’s.   	
+
+Enjoy a mega deli sandwich or a hearty skillet breakfast any time at the
+all-day diner. Indulge in some sinful brownies and gourmet coffee, while
+surfing the net on free WiFi. Stop by for some comfort food after a hard 
+day’s work. Meet friends and family over brunch on a lazy Sunday. It’s a
+great place to chill.
+</pre>
+</div></div>
+
+<h3 style="font-size: 20px; font-family: georgia; font-weight: bold;padding-top:15px;padding-left: 18%;"><a href ="https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="color: white;text-decoration: none" > Check out Indian Naan Palace Delhi</a></h3>
+
+<a href = "#next3"><span class="fa fa-chevron-circle-down" style="font-size:48px;color:orangered;padding-left:50%;text-decoration: none;"></span></a>
+</div>
+
+
+<div id = "next3" style="background-image: url('http://apna-dhaba.com/img/apna-dhaba-3.jpg');height: 800px;">
+	<div class="display-4" style="padding-left: 32%; padding-top:32%"><a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="color: tomato;text-decoration: none;font-family: georgia;">Indian Naan Palace</a></div> 
+	<a href = "#next4"><span class="fa fa-chevron-circle-down" style="font-size:48px;color:orangered;margin-top:15px;text-decoration: none;padding-left: 50%"></span></a>
+</div>
+
+<div id = "next4" style = "background-color: rgb(40,36,36);box-sizing: border-box;">
+	<div class = "row">
+
+<div class = "column">
+  <div class="gallery" style = "width:100%">
+    <a target="_blank" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">
+      <img id ="myimg" src="http://www.blogto.com/listings/restaurants/upload/2013/11/20131105-pukka590-04.jpg" alt="foodtruck"  style="width:100%">
+    </a>
+    <div class="overlay">
+    <div class="text"><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;"><pre style="font-family: georgia;font-size: 25px;color:orangered; padding-left: 20%">Planning a 
+party?</pre></a></div>
+  </div>
+ </div>
+</div>
+
+
+<div class = "column">
+  <div class="gallery" style="width:100%">
+    <a target="_blank" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">
+      <img id ="myimg" src="http://www.blogto.com/listings/restaurants/upload/2016/06/20160331-tich590-09.jpg" alt="foodtruck" style="width:100%">
+    </a>
+    <div class="overlay">
+    <div class="text"><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;"><pre style="font-family: georgia;font-size: 25px;color: orangered;padding:10%">Food To Go</pre></a></div>
+  </div>
+</div>
+</div>
+
+<div class = "column">
+  <div class="gallery" style="width:100%">
+    <a target="_blank" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">
+      <img  id ="myimg" src="http://www.blogto.com/listings/restaurants/upload/2016/06/20160324-tich590-01.jpg" alt="foodtruck" style="width:100%">
+    </a>
+    <div class="overlay">
+    <div class="text"><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;"><pre style="font-family: georgia;font-size: 25px;color:orangered;padding-top:10px;padding-left:10%">What The
+Press Say?</pre></a></div>
+  </div>
+</div>
+</div>
+</div>
+<div class = "row">
+
+	<div class = "column">
+  <div class="gallery" style="width:100%">
+    <a target="_blank" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">
+      <img  id ="myimg" src="http://www.blogto.com/listings/restaurants/upload/2016/06/20160331-tich590-05.jpg" alt="foodtruck" style="width:100%">
+    </a>
+    <div class="overlay">
+    <div class="text" style="padding-left: 60%;padding-top: 15px"><a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" class="fa fa-facebook" style="background-color: orangered; text-decoration: none"></a></div>
+  </div>
+</div>
+</div>
+
+<div class = "column">
+  <div class="gallery" style="width:100%">
+    <a target="_blank" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">
+      <img id ="myimg" src="http://www.blogto.com/listings/restaurants/upload/2016/06/20160331-tich590-06.jpg" alt="foodtruck"  style="width:100%">
+    </a>
+    <div class="overlay">
+    <div class="text" style="padding-left: 60%;padding-top: 15px"><a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" class="fa fa-instagram" style="background-color: orangered; text-decoration: none"></a></div>
+  </div>
+</div>
+</div>
+
+<div class = "column">
+  <div class="gallery" style="width:100%">
+    <a target="_blank" href="https://codepen.io/gowthamkumanduri/full/ZamqQQ">
+      <img  id ="myimg" src="http://www.blogto.com/listings/restaurants/upload/2016/06/20160331-tich590-11.jpg" alt="foodtruck" style="width:100%">
+    </a>
+    <div class="overlay">
+    <div class="text"><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;"><pre style="font-family: georgia;font-size: 35px; color:orangered; padding-top:10px;padding-left:10%">Top Picks</pre></a></div>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+
+
+<footer id = "footer" class="clearfix">
+<div style="background-color: black;">
+	<div class="container-fluid">
+		<div class = "row">
+			<div class = "col-3">
+           <h6 style="padding-top: 5%;padding-left: 20%;"><a href="https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="font-family: georgia;text-decoration: none; color: white;">Indian Naan Palace</a></h6>
+            <ul style="list-style-type:none;display:inline;">
+             <li style="padding-left: 20%"><a href="https://www.facebook.com/"  style="text-decoration: none" class="fa fa-facebook"></a>
+             <a href="https://www.foursquare.com/" style="text-decoration: none" class="fa fa-foursquare"></a>
+             <a href="https://www.instagram.com/" style="text-decoration: none" class="fa fa-instagram"></a>
+             <a style="text-decoration: none" class="fa fa-share-alt dropbtn"></a>
+             </li>
+             </ul> 
+            <h6 style="padding-top: 2%;padding-left: 20%;font-family: georgia;color:grey"> Be a IN palace insider</h6>
+            <h6 style="padding-left: 20%;font-family: georgia;color:grey">Exclusive News and Offers</h6>
+            <input type="email" name="email" placeholder="Enter E-mail" style="margin-left: 20%;width:150px;padding-left: 25px">
+            <input type="submit" value = "Sign up" style="background-color: tomato">
+             </div>
+            <div class = "col-2">
+            	<ul style="list-style-type:none;display:block;padding-top: 5%">
+                <li><h6 style="color:white;padding-left: 25%;font-family: georgia;font-weight: bold;">Home</h6></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;padding-left: 25%;">Offers</a></li>
+                </ul>
+            </div>
+            <div class = "col-2">
+            	<ul style="list-style-type:none;display:block;padding-top: 5%">
+                <li><h6 style="font-family: georgia;font-weight: bold;color: white;padding-left: 25%;">Location</h6></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;padding-left: 25%;">Delhi</a></li>
+                </ul>
+            </div>
+            <div class = "col-2">
+            	<ul style="list-style-type:none;display:block;padding-top: 5%">
+                <li><h6 style="font-family: georgia;font-weight: bold;color: white;padding-left: 25%;">Menu</h6></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;padding-left: 25%;">Delhi</a></li>
+                </ul>
+            </div>
+            <div class = "col-3">
+            	<ul style="list-style-type:none;display:block;padding-top: 5%">
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;font-family: georgia;font-weight: bold">Top picks</a></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;font-family: georgia;font-weight: bold">About</a></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;font-family: georgia;font-weight: bold">Contact Us</a></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;font-family: georgia;font-weight: bold">Join Us</a></li>
+                <li><h6 style = "color:white;font-family: georgia;font-weight: bold">Media</h6></li>
+                <li><a href = "https://codepen.io/gowthamkumanduri/full/ZamqQQ" style="text-decoration: none;color:white;">New releases</a></li>
+                </ul>
+            </div>
+        </div>
+<div class="row col-12" style="padding-left: 35%;">
+                <pre style="color: white;font-family: georgia">©Indian Naan Palace 2017  Limited. All rights reserved.
+<a href="sitemap" title="" style="color: white;font-family: georgia;">Sitemap</a> | <a href="terms" title="" style="color: white;font-family: georgia;">Website Terms</a> | <a href="privacy" title="" style="color: white;font-family: georgia;">Privacy</a></pre>
+            </div>
+</div>
+</div>
+</footer>
+
+
+<script>
+$("#demo ul a[href^='#next']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 500, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
+
+<script>
+$("#demo1 ul a[href^='#next1']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 500, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
+
+
+<script>
+$("#next1 a[href^='#test1']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 500, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
+
+<script>
+$("#test1 a[href^='#next2']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 500, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
+
+<script>
+$("#next2 a[href^='#next3']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 500, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
+
+
+<script>
+$("#next3 a[href^='#next4']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 500, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
+
+ <script>
+  $('#demo').carousel({
+   interval: 2500
+   
+  });
+
+$('#demo1').carousel({
+   interval: 5000
+   
+  });
+
+/*$(document).ready(function(){    //to make web page scroll to top when reload
+    $(this).scrollTop(0);
+});
+
+/*$(document).ready(function() {
+
+$(document).keydown(function(e) {
+    if (e.keyCode === 37) {
+       // Previous
+       $(".carousel-indicators li").click();
+      
+       return false;
+    }
+    if (e.keyCode === 39) {
+       // Next
+       $(".carousel-indicators li").click();
+   
+       return false;
+    }
+});
+
+});*/
+
+</script>    
+
+
+ 
+
+
+</html>
